@@ -661,12 +661,13 @@ transform: translateY(-8px);
 
 .image-mosaic img,
 .media-grid img {
-  background: #e6ecef;
+  background: #f1f3f5;
   border-radius: 8px;
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
+
 .image-mosaic img:hover{
   transform: translateY(-8px);
   box-shadow: var(--shadow);
