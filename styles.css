@@ -1252,3 +1252,225 @@ transform: translateY(-8px);
     display: none ;
   }
 }
+
+.scene {
+  width: 100%;
+  max-width: 650px;
+  aspect-ratio: 4 / 3;
+  margin: 40px auto 0;
+  perspective: 1200px;
+  position: relative;
+}
+
+.machine-tooltip {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  color: var(--navy);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 10px 20px rgba(16, 47, 72, 0.15);
+  z-index: 20;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.machine-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  backface-visibility: hidden; 
+}
+
+.carousel__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f1f3f5;
+  padding: 24px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.carousel-controls button {
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.service-card {
+  background-color: rgba(16, 47, 72, 0.80); 
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.service-card:hover {
+  background-color: rgba(16, 47, 72, 0.70); 
+}
+
+.service-card h3 {
+  color: var(--white);
+}
+
+.service-card p {
+  color: #c7d6df; 
+}
+
+.service-card span {
+  color: var(--safety);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 4px;
+  width: max-content;
+  margin-bottom: 24px;
+}
+
+.stats-grid div {
+  background-color: rgba(16, 47, 72, 0.88); 
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.stats-grid div:hover {
+  background-color: rgba(16, 47, 72, 0.70); 
+}
+
+.stats-grid div strong {
+  color: var(--white); 
+}
+
+.stats-grid div span {
+  color: #c7d6df; 
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate-1 { animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.hero-animate-2 { animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+.hero-animate-3 { animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.hero-animate-4 { animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+.hero-animate-5 { animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+
+.hero {
+  position: relative; 
+}
+
+.hero-visual {
+  position: relative;
+  padding: 0; 
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slowZoom 20s linear infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-metric {
+  position: absolute;
+  z-index: 2;
+}
+
+.material-grid article {
+  background-color: rgba(16, 47, 72, 0.88); 
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.material-grid article:hover {
+  background-color: rgba(16, 47, 72, 0.70); 
+}
+
+.material-grid article h3 {
+  color: var(--white); 
+}
+
+.material-grid article p {
+  color: #c7d6df; 
+}
+
+.hero-metric .metric-number {
+  display: flex;
+  align-items: flex-start; 
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.hero-metric .count-up {
+  font-size: 56px; 
+  line-height: 0.85;
+  color: var(--navy);
+}
+
+.hero-metric .plus-symbol {
+  font-size: 28px; 
+  color: var(--teal); 
+  line-height: 1;
+  margin-top: 2px; 
+}
