@@ -5,8 +5,8 @@
   --paper: #f6f8f9;
   --white: #ffffff;
   --steel: #23566f;
-  --navy: #102f48;
-  --teal: #009a9a;
+  --navy: #2A2B6B;
+  --teal: #2485D2;
   --safety: #f5a623;
   --oxide: #a64b3c;
   --shadow: 0 20px 50px rgba(16, 47, 72, 0.12);
@@ -947,8 +947,8 @@ transform: translateY(-8px);
 }
 
 .footer-bottom {
-  background: #0a2032; 
-  color: #6a8296;
+  background: #000204; 
+  color: #a3b1bd;
   text-align: center;
   padding: 20px;
   font-size: 14px;
